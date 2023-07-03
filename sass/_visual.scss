@@ -1,0 +1,100 @@
+#visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .panel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 1s;
+            z-index: 1;
+            opacity: 0;
+
+            &:nth-of-type(1) {
+                background-color: lightpink;
+            }
+
+            &:nth-of-type(2) {
+                background-color: lightyellow;
+            }
+
+            &:nth-of-type(3) {
+                background-color: lightseagreen;
+            }
+
+            &:nth-of-type(4) {
+                background-color: lightblue;
+            }
+
+            &.on {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+
+
+    }
+
+    nav {
+        position: absolute;
+        z-index: 3;
+        bottom: 9vh;
+        right: 10vh;
+        display: flex;
+        gap: 40px;
+        font-size: 20px;
+        color: #ddd;
+        cursor: pointer;
+
+        i {
+            display: inline-block;
+            transition: 0.5s;
+
+            &.on {
+                color: #000;
+                transform: scale(2);
+            }
+        }
+    }
+
+    .btns {
+        position: absolute;
+        left: 10vw;
+        bottom: 10vh;
+        display: flex;
+        gap: 10px;
+        z-index: 3;
+
+        li {
+            width: 70px;
+            height: 5px;
+            background-color: #ddd;
+            transition: 0.5s;
+            cursor: pointer;
+
+            &.on {
+                width: 150px;
+                background-color: #000;
+            }
+        }
+    }
+
+    .bar {
+        width: 0%;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+    }
+}
